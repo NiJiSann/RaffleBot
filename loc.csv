@@ -1,0 +1,36 @@
+key,eng,rus,uzb
+send_code,Send Code,Отправить код,Kodni Yuborish
+raffle,Raffle,Лотерея,Lotereya
+sell_tickets,Sell Tickets,Продать билеты,Chiptalarni Sotish
+referral_code,My referral code,Мой реферальный код,Mening yo'naltiruvchi kodim
+my_profile,My Profile,Мой профиль,Mening Profilim
+back,Back,Назад,Orqaga
+code_type,Select code type,Выберите тип кода,Kod turini tanlang
+screenshot,Send screenshot of code,Отправьте скриншот кода,Kodning skrinshotini yuboring
+send_code_txt,Send code in text,Отправить код в текстовом виде,Kodni matnga yuboring
+thx_wait,Thanks! Wait for verification,Спасибо! Дождитесь подтверждения,Minnatdorchilik! Tekshirishni kuting
+invalid_code,Invalid code format,Недопустимый формат кода,Kod formati noto'g'ri
+hello,Hello,Здравствуйте,Salom alaykum
+name,Name,Имя,Ism
+tickets,Tickets,Билеты,Chiptalar
+reputation,Reputation,Репутация,Obro'
+thanks,Thanks! ,Спасибо!,Minnatdorchilik!
+hlp,Help yourself,Помоги себе,O'zingizga yordam bering
+set_wallet,Set wallet,Добавить кошелек,Hamyonni o'rnating
+send_wallet_address,Send your USDT wallet address,Отправьте адрес своего кошелька USDT,Usdt hamyoningiz manzilini yuboring
+set_r_code,Set friend referral code,Добавь реферальный код друга,Do'stga murojaat kodini o'rnating
+send_r_code,Send your friend's referral code,Отправьте реферальный код вашего друга,Do'stingizning yo'llanma kodini yuboring
+choose_raffle,Choose raffle,Выберите розыгрыш,Lotereyani tanlang
+you_have,You have,У тебя есть,Sizda bor
+sell_tickets_amount,Enter amount of tickets you want to sell,"Введите количество билетов, которые вы хотите продать",Sotmoqchi bo'lgan chiptalar miqdorini kiriting
+invalid_address,Invalid wallet address format!,Неверный формат адреса кошелька!,Hamyon manzili formati noto'g'ri!
+invalid_referral,Invalid referral code format!,Неверный формат реферального кода!,Yo'naltiruvchi kod formati noto'g'ri!
+invalid_input,Invalid input!,Неверный ввод!,Xato kiritish!
+not_enough_t,Not enough tickets,Не хватает билетов,Chiptalar yetarli emas
+you_sold,You sold,Ты продал,Siz sotdingiz
+after_confirm,After confirmation money will be sent to your wallet,После подтверждения деньги будут отправлены на ваш кошелек,Tasdiqlashdan keyin pul hamyoningizga yuboriladi
+raffle_100,Participate in raffle and WIN 100$ \nYou can buy seats multiple times to increase\nchance of winning in raffle!\n\n,"Участвуйте в розыгрыше и ВЫИГРАЙТЕ 100$ \nВы можете покупать места несколько раз, чтобы увеличить \nшансы на выигрыш в розыгрыше!\n\n",Lotereyada ishtirok eting va 100$ yutib oling \nlotereyada g'alaba qozonish imkoniyatini oshirish uchun \no'rindiqlarni bir necha marta sotib olishingiz mumkin!\n\n
+participants,Participants,Участники,Ishtirokchilar
+you_bought_seat,You bought one seat in raffle,Вы купили одно место в розыгрыше,Siz lotereyada bitta o'rindiq sotib oldingiz
+error,Error,Ошибка,Xato
+success,Success,Успех,Muvaffaqiyat
