@@ -209,27 +209,23 @@ def back(message: Message):
 
 @bot.message_handler()
 def delete_last_message(message: Message):
-    global sell_state
+    global sell_state, profile_btn, code_btn, main_btn
     user_id = message.from_user.id
 
     if code_state:
-        global code_btn
         code_btn = Extentions.add_buttons(code_btn, Layout.get_code_layout(user_id))
         bot.reply_to(message, loc(Lk.invalid_code, user_id), reply_markup=code_btn)
         return
     if wallet_state:
-        global profile_btn
         profile_btn = Extentions.add_buttons(profile_btn, Layout.get_profile_layout(user_id))
         bot.reply_to(message, loc(Lk.invalid_address, user_id), reply_markup=profile_btn)
         return
     if referral_state:
-        global profile_btn
         profile_btn = Extentions.add_buttons(profile_btn, Layout.get_profile_layout(user_id))
         bot.reply_to(message, loc(Lk.invalid_referral, user_id), reply_markup=profile_btn)
         return
     if sell_state:
         sell_state = False
-        global main_btn
         main_btn = Extentions.add_buttons(main_btn, Layout.get_main_layout(user_id))
         bot.reply_to(message, loc(Lk.invalid_input, user_id), reply_markup=main_btn)
         return
