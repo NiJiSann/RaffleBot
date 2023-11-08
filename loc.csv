@@ -29,7 +29,13 @@ invalid_input,Invalid input!,Неверный ввод!,Xato kiritish!
 not_enough_t,Not enough tickets,Не хватает билетов,Chiptalar yetarli emas
 you_sold,You sold,Ты продал,Siz sotdingiz
 after_confirm,After confirmation money will be sent to your wallet,После подтверждения деньги будут отправлены на ваш кошелек,Tasdiqlashdan keyin pul hamyoningizga yuboriladi
-raffle_100,Participate in raffle and WIN 100$ \nYou can buy seats multiple times to increase\nchance of winning in raffle!\n\n,"Участвуйте в розыгрыше и ВЫИГРАЙТЕ 100$ \nВы можете покупать места несколько раз, чтобы увеличить \nшансы на выигрыш в розыгрыше!\n\n",Lotereyada ishtirok eting va 100$ yutib oling \nlotereyada g'alaba qozonish imkoniyatini oshirish uchun \no'rindiqlarni bir necha marta sotib olishingiz mumkin!\n\n
+raffle_100,"Participate in raffle and WIN 100$ 
+You can buy seats multiple times to increase
+chance of winning in raffle!","Участвуйте в розыгрыше и ВЫИГРАЙТЕ 100$ 
+Вы можете покупать места несколько раз, чтобы увеличить 
+шансы на выигрыш в розыгрыше!","Lotereyada ishtirok eting va 100$ yutib oling 
+lotereyada g'alaba qozonish imkoniyatini oshirish uchun 
+o'rindiqlarni bir necha marta sotib olishingiz mumkin!"
 participants,Participants,Участники,Ishtirokchilar
 you_bought_seat,You bought one seat in raffle,Вы купили одно место в розыгрыше,Siz lotereyada bitta o'rindiq sotib oldingiz
 error,Error,Ошибка,Xato

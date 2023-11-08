@@ -23,6 +23,7 @@ code_state = False
 wallet_state = False
 referral_state = False
 sell_state = False
+loc_state = False
 image_byte = b'0'
 
 main_btn = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
@@ -48,17 +49,10 @@ def start(message: Message):
 
 # region choose loc
 def show_languages(user_id):
+    global loc_state
+    loc_state = True
     res = Loc.show_loc()
     bot.send_message(user_id, res[1], reply_markup=res[0])
-
-@bot.callback_query_handler(func=lambda callback: callback.data)
-def set_loc(callback: CallbackQuery):
-    user_id = callback.from_user.id
-    DataBase.set_user_loc(user_id, callback.data)
-    global main_btn
-    main_btn = Extentions.add_buttons(main_btn, Layout.get_main_layout(user_id))
-    bot.send_message(user_id, f"{loc(Lk.thanks, user_id)}", reply_markup=main_btn)
-
 # endregion
 
 # region my profile section
@@ -161,14 +155,7 @@ def raffle100(message: Message):
     res = Raffle.show_raffle_100(user_id)
     bot.send_message(user_id, res[1], reply_markup=res[0])
 
-@bot.callback_query_handler(func=lambda callback: callback.data)
-def buy_raffle100_seat(callback: CallbackQuery):
-    if not callback.data == 'raffle100':
-        return
 
-    user_id = callback.from_user.id
-    res = Raffle.buy_raffle100(user_id)
-    bot.send_message(user_id, res)
 
 # endregion
 
@@ -230,6 +217,26 @@ def delete_last_message(message: Message):
         bot.reply_to(message, loc(Lk.invalid_input, user_id), reply_markup=main_btn)
         return
     bot.delete_message(chat_id=user_id, message_id=message.message_id)
+# endregion
+
+
+# region callbacks
+@bot.callback_query_handler(func=lambda callback: callback.data)
+def callbacks_handler(callback: CallbackQuery):
+    if callback.data == 'raffle100':
+        user_id = callback.from_user.id
+        res = Raffle.buy_raffle100(user_id)
+        bot.send_message(user_id, res)
+
+    global loc_state
+    if loc_state:
+        loc_state = False
+        user_id = callback.from_user.id
+        DataBase.set_user_loc(user_id, callback.data)
+        global main_btn
+        main_btn = Extentions.add_buttons(main_btn, Layout.get_main_layout(user_id))
+        bot.send_message(user_id, f"{loc(Lk.thanks, user_id)}", reply_markup=main_btn)
+
 # endregion
 
 def start_bot():

@@ -21,7 +21,7 @@ def raffle(message: Message):
     return message.text == loc(Lk.raffle, message.from_user.id)
 
 def raffle100(message: Message):
-    return loc(Lk.raffle_100, message.from_user.id) in message.text
+    return f'{loc(Lk.raffle, message.from_user.id)} 100' in message.text
 
 def sell_tickets(message: Message):
     return message.text == loc(Lk.sell_tickets, message.from_user.id)

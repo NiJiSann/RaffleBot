@@ -21,7 +21,7 @@ def get_code_layout(user_id):
 
 def get_raffle_layout(user_id):
     raffle_layout = [
-        f"{loc(Lk.raffle_100, user_id)}$",
+        f"{loc(Lk.raffle, user_id)} 100$",
         loc(Lk.back, user_id)
     ]
     return raffle_layout
