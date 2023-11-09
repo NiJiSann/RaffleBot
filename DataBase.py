@@ -132,10 +132,37 @@ def get_user_loc(user_id):
     connection.close()
     return loc
 
+def get_codes(denied, checking, confirmed):
+    connection = sqlite3.connect('users.db')
+    cursor = connection.cursor()
+
+    where = ''
+    if denied:
+        where += 'WHERE status = "denied" '
+    if checking:
+        if not denied:
+            where += 'WHERE '
+        else:
+            where += 'OR '
+
+        where += 'status = "checking" '
+    if confirmed:
+        if not checking and not denied:
+            where += 'WHERE '
+        else:
+            where += 'OR '
+        where += 'status = "confirmed" '
+    query = f'''SELECT * FROM CODES {where}'''
+    data = cursor.execute(query)
+    res = data.fetchall()
+    connection.commit()
+    connection.close()
+    return res
+
 def set_user_ticket_count(user_id, amount):
     connection = sqlite3.connect('users.db')
     cursor = connection.cursor()
-    query = f'''UPDATE USERS SET tickets=? WHERE user_id=?'''
+    query = '''UPDATE USERS SET tickets=? WHERE user_id=?'''
     cursor.execute(query, (amount, user_id))
     connection.commit()
     connection.close()
@@ -159,9 +186,10 @@ def create_code_tb():
     table = """ CREATE TABLE CODES(
                  ID INT PRIMARY KEY NOT NULL,
                  user_name VARCHAR(255),
-                 user_id REAL,
+                 user_id INT,
                  code VARCHAR(255),
-                 img BLOB
+                 img VARCHAR(255),
+                 status VARCHAR(255)
              ); """
 
     cursor.execute(table)
@@ -180,7 +208,7 @@ def create_users_tb():
                 name_last VARCHAR(255),
                 user_name VARCHAR(255),
                 reputation INT DEFAULT 0,
-                user_id REAL,
+                user_id INT,
                 referral_own VARCHAR(255),
                 referral_user VARCHAR(255),
                 tickets INT DEFAULT 0,
@@ -225,5 +253,5 @@ def create_payout_tb():
     connection.close()
 
 if __name__ == "__main__":
-    create_users_tb()
     create_code_tb()
+    create_users_tb()

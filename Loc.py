@@ -65,8 +65,12 @@ def parse_loc():
 
 def get_loc(key, user_id):
     lang = DataBase.get_user_loc(user_id)
-    return loc_data[key][lang][0]
-
+    if lang == 'None':
+        lang = 'eng'
+    try:
+        return loc_data[key][lang][0]
+    except Exception as e:
+        print(e)
 
 if __name__ == '__main__':
     pass
