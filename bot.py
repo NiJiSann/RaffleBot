@@ -27,7 +27,7 @@ loc_state = False
 image_byte = b'0'
 
 main_btn = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-code_btn = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
+code_btn = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
 raffle_btn = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
 sell_btn = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
 profile_btn = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
@@ -217,6 +217,12 @@ def delete_last_message(message: Message):
         bot.reply_to(message, loc(Lk.invalid_input, user_id), reply_markup=main_btn)
         return
     bot.delete_message(chat_id=user_id, message_id=message.message_id)
+
+
+def send_notification(user_id, text):
+    bot.send_message(user_id, text,)
+
+
 # endregion
 
 

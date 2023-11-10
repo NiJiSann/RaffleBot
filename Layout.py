@@ -12,11 +12,14 @@ def get_main_layout(user_id):
 
 def get_code_layout(user_id):
     code_layout = [
-        "Roblox 200", "Roblox 400",
-        "Roblox 800", "Roblox 1000",
-        "Overwatch 200", "Overwatch 500",
-        "Overwatch 1000", loc(Lk.back, user_id)
+        "Overwatch 200",  loc(Lk.back, user_id)
     ]
+
+    # "Roblox 400",
+    # "Roblox 800", "Roblox 1000",
+    # "Overwatch 200", "Overwatch 500",
+    # "Overwatch 1000",
+
     return code_layout
 
 def get_raffle_layout(user_id):

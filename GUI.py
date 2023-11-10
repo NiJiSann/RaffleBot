@@ -81,16 +81,27 @@ def get_codes():
 
 
 def deny_code(user_id):
-    pass
+    DataBase.set_code_state(user_id, 'denied')
+    DataBase.add_reputation(user_id, -1)
+    bot.send_notification(user_id, "Your code was denied")
 
 
 def check_code(user_id):
-    pass
+    DataBase.set_code_state(user_id, 'checking')
 
 
 def confirm_code(user_id):
-    pass
+    DataBase.set_code_state(user_id, 'confirmed')
+    DataBase.add_reputation(user_id, 1)
+    DataBase.add_tickets(user_id, 10)
 
+    bot.send_notification(user_id, "You got 10 tickets")
+    try:
+        DataBase.add_r_tickets(user_id)
+        f_id = DataBase.get_user_f_id(user_id)
+        bot.send_notification(f_id, "You got 1 ticket from your friend")
+    except:
+        pass
 
 def show_image(img_bytes):
     imageStream = io.BytesIO(img_bytes)
@@ -125,10 +136,15 @@ def refresh_codes():
         checking_code_btn.grid(row=item_height, column=5, padx=10)
         confirm_code_btn.grid(row=item_height, column=6, padx=10)
 
+        # if item[5] == 'denied' or item[5] == 'confirmed':
+        #     deny_code_btn.configure(state='disabled')
+        #     confirm_code_btn.configure(state='disabled')
+        #     checking_code_btn.configure(state='disabled')
+
         image.configure(command=lambda x=item[4]: show_image(x))
-        deny_code_btn.configure(command=lambda x=item[3]: deny_code(x))
-        checking_code_btn.configure(command=lambda x=item[3]: check_code(x))
-        confirm_code_btn.configure(command=lambda x=item[3]: confirm_code(x))
+        deny_code_btn.configure(command=lambda x=item[2]: deny_code(x))
+        checking_code_btn.configure(command=lambda x=item[2]: check_code(x))
+        confirm_code_btn.configure(command=lambda x=item[2]: confirm_code(x))
 
         codes_list.append(user_id)
         codes_list.append(code)

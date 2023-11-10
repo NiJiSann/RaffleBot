@@ -1,141 +1,94 @@
 import sqlite3
 
-def get_user(user_id):
+def create_table(drop, table):
     connection = sqlite3.connect('users.db')
     cursor = connection.cursor()
-    query = f"SELECT * FROM USERS WHERE user_id = {user_id}"
-    try:
-        cursor.execute(query)
-        res = cursor.fetchall()
-    except:
-        return 'Error'
-
+    cursor.execute(drop)
+    cursor.execute(table)
+    connection.commit()
     connection.close()
-    return res
+
+def get_query_executor(query):
+    try:
+        connection = sqlite3.connect('users.db')
+        cursor = connection.cursor()
+        data = cursor.execute(query)
+        res = data.fetchall()
+        connection.commit()
+        connection.close()
+        return res
+    except:
+        pass
+
+def set_query_executor(query, params):
+    try:
+        connection = sqlite3.connect('users.db')
+        cursor = connection.cursor()
+        cursor.execute(query, params)
+        cursor.fetchall()
+        connection.commit()
+        connection.close()
+    except:
+        pass
+
+def get_user(user_id):
+    query = f"SELECT * FROM USERS WHERE user_id = {user_id}"
+    return get_query_executor(query)
 
 def set_user(name, user_id, referral, name_last=None, username=None):
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
-    query = '''INSERT INTO USERS (ID, name, name_last, user_id, referral_own, user_name) VALUES(?,?,?,?,?,?)'''
-    query_len = '''SELECT * FROM USERS'''
-    data = cursor.execute(query_len)
-    length = len(data.fetchall())
-    print(length)
-    try:
-        cursor.execute(query, (length+1, name, name_last, user_id, referral, username))
-        cursor.fetchall()
-        connection.commit()
-    except Exception as e:
-        print(e)
+    query = '''INSERT INTO USERS (name, name_last, user_id, referral_own, user_name) VALUES(?,?,?,?,?)'''
+    params = (name, name_last, user_id, referral, username)
+    set_query_executor(query, params)
 
-    connection.close()
-
-def get_user_referr(user_id):
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
+def get_user_r_code(user_id):
     query = f"SELECT referral_own FROM USERS WHERE user_id = {user_id}"
-
-    try:
-        cursor.execute(query)
-        data = cursor.fetchall()
-        connection.close()
-        return data
-    except Exception as e:
-        print(e)
-        connection.close()
-        return ""
+    return get_query_executor(query)[0][0]
 
 def get_user_name(user_id):
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
     query = f"SELECT user_name FROM USERS WHERE user_id = {user_id}"
+    return get_query_executor(query)[0][0]
 
-    try:
-        cursor.execute(query)
-        data = cursor.fetchall()
-        connection.close()
-        return data
-    except Exception as e:
-        print(e)
-        connection.close()
-        return ""
-
-def add_code(user_id, code, img):
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
-    query = '''INSERT INTO CODES(ID, user_name, user_id, code, img) VALUES(?,?,?,?,?)'''
-    query_len = '''SELECT * FROM CODES'''
-    data = cursor.execute(query_len)
-    length = len(data.fetchall())
-    try:
-        cursor.execute(query, (length+1, get_user_name(user_id)[0][0], user_id, code, img))
-        cursor.fetchall()
-        connection.commit()
-    except Exception as e:
-        print(e)
-
-    connection.close()
+def set_code(user_id, code, img):
+    query = '''INSERT INTO CODES(user_name, user_id, code, img) VALUES(?,?,?,?)'''
+    params = (get_user_name(user_id), user_id, code, img)
+    set_query_executor(query, params)
 
 def set_wallet(user_id, wallet):
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
     query = f'''UPDATE USERS SET wallet=? WHERE user_id=?'''
-    try:
-        cursor.execute(query, (wallet, user_id))
-        cursor.fetchall()
-        connection.commit()
-    except Exception as e:
-        print(e)
-
-    connection.close()
+    params = (wallet, user_id)
+    set_query_executor(query, params)
 
 def set_friend_referral(user_id, code):
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
     query = f'''UPDATE USERS SET referral_user=? WHERE user_id=?'''
-    try:
-        cursor.execute(query, (code, user_id))
-        cursor.fetchall()
-        connection.commit()
-    except Exception as e:
-        print(e)
-
-    connection.close()
+    params = (code, user_id)
+    set_query_executor(query, params)
 
 def get_raffle100_p_count():
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
-    query_len = '''SELECT * FROM RAFFLE100'''
-    data = cursor.execute(query_len)
-    length = len(data.fetchall())
-    connection.commit()
-    connection.close()
-    return length
+    query = '''SELECT * FROM RAFFLE100'''
+    return len(get_query_executor(query))
 
 def get_user_ticket_count(user_id):
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
     query = f"SELECT tickets FROM USERS WHERE user_id = {user_id}"
-    data = cursor.execute(query)
-    count = data.fetchall()[0][0]
-    connection.commit()
-    connection.close()
-    return count
+    return get_query_executor(query)[0][0]
 
 def get_user_loc(user_id):
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
     query = f"SELECT loc FROM USERS WHERE user_id = {user_id}"
-    data = cursor.execute(query)
-    loc = data.fetchall()[0][0]
-    connection.commit()
-    connection.close()
-    return loc
+    return get_query_executor(query)[0][0]
+
+def get_user_reputation(user_id):
+    query = f"SELECT reputation FROM USERS WHERE user_id = {user_id}"
+    return get_query_executor(query)[0][0]
+
+def get_user_f_r_code(user_id):
+    query = f"SELECT referral_user FROM USERS WHERE user_id = {user_id}"
+    return get_query_executor(query)[0][0]
+
+def get_user_f_id(user_id):
+    fr = get_user_f_r_code(user_id)
+    query = f"SELECT user_id FROM USERS WHERE referral_own = {fr}"
+    return get_query_executor(query)[0][0]
 
 def get_codes(denied, checking, confirmed):
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
-
     where = ''
     if denied:
         where += 'WHERE status = "denied" '
@@ -144,7 +97,6 @@ def get_codes(denied, checking, confirmed):
             where += 'WHERE '
         else:
             where += 'OR '
-
         where += 'status = "checking" '
     if confirmed:
         if not checking and not denied:
@@ -153,28 +105,42 @@ def get_codes(denied, checking, confirmed):
             where += 'OR '
         where += 'status = "confirmed" '
     query = f'''SELECT * FROM CODES {where}'''
-    data = cursor.execute(query)
-    res = data.fetchall()
-    connection.commit()
-    connection.close()
-    return res
+
+    return get_query_executor(query)
 
 def set_user_ticket_count(user_id, amount):
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
     query = '''UPDATE USERS SET tickets=? WHERE user_id=?'''
-    cursor.execute(query, (amount, user_id))
-    connection.commit()
-    connection.close()
+    params = (amount, user_id)
+    set_query_executor(query, params)
 
 def set_user_loc(user_id, loc):
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
     query = f'''UPDATE USERS SET loc=? WHERE user_id=?'''
-    cursor.execute(query, (loc, user_id))
-    connection.commit()
-    connection.close()
+    params = (loc, user_id)
+    set_query_executor(query, params)
 
+def set_code_state(user_id, state):
+    query = f'''UPDATE CODES SET status=? WHERE user_id=?'''
+    params = (state, user_id)
+    set_query_executor(query, params)
+
+def add_reputation(user_id, val):
+    query = f'''UPDATE USERS SET reputation=? WHERE user_id=?'''
+    rep = get_user_reputation(user_id) + val
+    params = (rep, user_id)
+    set_query_executor(query, params)
+
+def add_tickets(user_id, val):
+    query = f'''UPDATE USERS SET tickets=? WHERE user_id=?'''
+    rep = get_user_ticket_count(user_id) + val
+    params = (rep, user_id)
+    set_query_executor(query, params)
+
+def add_r_tickets(user_id):
+    query = f'''UPDATE USERS SET tickets=? WHERE user_id=?'''
+    f_id = get_user_f_id(user_id)
+    t = get_user_ticket_count(f_id) + 1
+    params = (t, f_id)
+    set_query_executor(query, params)
 
 def create_code_tb():
     connection = sqlite3.connect('users.db')
@@ -184,11 +150,10 @@ def create_code_tb():
 
     # Creating table
     table = """ CREATE TABLE CODES(
-                 ID INT PRIMARY KEY NOT NULL,
                  user_name VARCHAR(255),
                  user_id INT,
                  code VARCHAR(255),
-                 img VARCHAR(255),
+                 img BLOB,
                  status VARCHAR(255)
              ); """
 
@@ -196,14 +161,8 @@ def create_code_tb():
     connection.commit()
     connection.close()
 def create_users_tb():
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
-
-    cursor.execute("DROP TABLE IF EXISTS USERS")
-
-    # Creating table
+    drop = "DROP TABLE IF EXISTS USERS"
     table = """ CREATE TABLE USERS(
-                ID INT PRIMARY KEY NOT NULL,
                 name VARCHAR(255),
                 name_last VARCHAR(255),
                 user_name VARCHAR(255),
@@ -217,40 +176,24 @@ def create_users_tb():
                 loc VARCHAR(255)
             ); """
 
-    cursor.execute(table)
-    connection.commit()
-    connection.close()
+    create_table(drop, table)
+
 def create_raffle100_tb():
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
-
-    cursor.execute("DROP TABLE IF EXISTS RAFFLE100")
-
-    # Creating table
+    drop = "DROP TABLE IF EXISTS RAFFLE100"
     table = """ CREATE TABLE RAFFLE100(
                 user_id REAL,
                 wallet VARCHAR(255)
             ); """
+    create_table(drop, table)
 
-    cursor.execute(table)
-    connection.commit()
-    connection.close()
 def create_payout_tb():
-    connection = sqlite3.connect('users.db')
-    cursor = connection.cursor()
-
-    cursor.execute("DROP TABLE IF EXISTS PAYOUT")
-
-    # Creating table
+    drop = "DROP TABLE IF EXISTS PAYOUT"
     table = """ CREATE TABLE PAYOUT(
                 user_id REAL,
                 tickets INT DEFAULT 0,
                 wallet VARCHAR(255)
             ); """
-
-    cursor.execute(table)
-    connection.commit()
-    connection.close()
+    create_table(drop, table)
 
 if __name__ == "__main__":
     create_code_tb()
