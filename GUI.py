@@ -1,7 +1,7 @@
 from customtkinter import *
 import customtkinter
 import threading
-from PIL import Image, ImageTk
+from PIL import Image
 import DataBase
 import Loc
 import bot

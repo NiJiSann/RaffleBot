@@ -22,7 +22,7 @@ def get_profile_info(user_id):
             f'{loc(Lk.reputation, user_id)}: {user_data[0][4]}\n')
 
 def get_referral_code(user_id):
-    return DataBase.get_user_referr(user_id)[0][0]
+    return DataBase.get_user_r_code(user_id)
 
 def set_wallet(message: Message, user_id):
     DataBase.set_wallet(user_id, message.text)

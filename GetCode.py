@@ -1,4 +1,3 @@
-import sys
 import telebot
 from telebot.types import *
 import DataBase
@@ -11,5 +10,5 @@ def save_code_screenshot(message: Message, bot: telebot.TeleBot):
 
 def save_code_txt(message: Message, user_id, image):
     m_code = message.text
-    DataBase.add_code(user_id, m_code, image)
+    DataBase.set_code(user_id, m_code, image)
 

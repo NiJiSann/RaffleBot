@@ -154,9 +154,6 @@ def raffle100(message: Message):
     user_id = message.from_user.id
     res = Raffle.show_raffle_100(user_id)
     bot.send_message(user_id, res[1], reply_markup=res[0])
-
-
-
 # endregion
 
 # region sell section
