@@ -188,7 +188,7 @@ def back(message: Message):
     user_id = message.from_user.id
     global main_btn
     main_btn = Extentions.add_buttons(main_btn, Layout.get_main_layout(user_id))
-    bot.send_message(user_id, "'_'", reply_markup=main_btn)
+    bot.send_message(user_id, '<', reply_markup=main_btn)
 
 
 @bot.message_handler()

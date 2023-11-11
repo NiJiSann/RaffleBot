@@ -17,9 +17,9 @@ def set_user_info(message: Message):
 
 def get_profile_info(user_id):
     user_data = DataBase.get_user(user_id)
-    return (f'{loc(Lk.name, user_id)}: {user_data[0][1]} {user_data[0][2]} \n'
-            f'{loc(Lk.tickets, user_id)}: {user_data[0][8]}\n'
-            f'{loc(Lk.reputation, user_id)}: {user_data[0][4]}\n')
+    return (f'{loc(Lk.name, user_id)}: {user_data[0][0]} {user_data[0][1]} \n'
+            f'{loc(Lk.tickets, user_id)}: {user_data[0][7]}\n'
+            f'{loc(Lk.reputation, user_id)}: {user_data[0][3]}\n')
 
 def get_referral_code(user_id):
     return DataBase.get_user_r_code(user_id)
