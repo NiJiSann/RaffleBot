@@ -13,11 +13,10 @@ def set_user_info(message: Message):
     if not user_data:
         DataBase.set_user(user_first_name, user_id, str(uuid.uuid4()), user_last_name, username)
 
-    return f"{loc(Lk.hello, user_id)} {user_first_name} {user_last_name}"
 
 def get_profile_info(user_id):
     user_data = DataBase.get_user(user_id)
-    return (f'{loc(Lk.name, user_id)}: {user_data[0][0]} {user_data[0][1]} \n'
+    return (f'{loc(Lk.name, user_id)}: {user_data[0][0]} \n'
             f'{loc(Lk.tickets, user_id)}: {user_data[0][7]}\n'
             f'{loc(Lk.reputation, user_id)}: {user_data[0][3]}\n')
 

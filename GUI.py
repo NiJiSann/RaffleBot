@@ -4,6 +4,7 @@ import threading
 
 import CodesTab
 import DailyNotifications
+import ExtTab
 import Loc
 import PayoutTab
 import RaffleTab
@@ -28,10 +29,12 @@ tab_view = CTkTabview(root, height=windowHeight - 30, width=windowWidth)
 codes_tab = tab_view.add("Codes")
 payout_tab = tab_view.add("Payouts")
 raffle_tab = tab_view.add("Raffle 100")
+ext_tab = tab_view.add("  ext  ")
 
 CodesTab.set_tab(codes_tab)
 RaffleTab.set_tab(raffle_tab)
 PayoutTab.set_tab(payout_tab)
+ExtTab.set_tab(ext_tab)
 
 is_bot_running = BooleanVar(value=False)
 

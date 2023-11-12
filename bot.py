@@ -41,8 +41,7 @@ def h(message: Message):
 @bot.message_handler(commands=['start'])
 def start(message: Message):
     user_id = message.from_user.id
-    res = UserInfo.set_user_info(message)
-    # bot.send_message(user_id, res)
+    UserInfo.set_user_info(message)
     show_languages(user_id)
 
 # endregion

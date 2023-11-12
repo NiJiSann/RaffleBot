@@ -103,8 +103,8 @@ def get_raffle100():
     query = f"SELECT * FROM RAFFLE100"
     return get_query_executor(query)
 
-def get_users():
-    query = f"SELECT user_id FROM USERS"
+def get_users(column):
+    query = f"SELECT {column} FROM USERS"
     return get_query_executor(query)
 
 # endregion
@@ -218,7 +218,7 @@ def create_users_tb():
                 referral_own VARCHAR(255),
                 referral_user VARCHAR(255),
                 tickets INT DEFAULT 0,
-                quantity_of_codes INT,
+                quantity_of_codes INT DEFAULT 0,
                 wallet VARCHAR(255),
                 loc VARCHAR(255)
             ); """
@@ -242,6 +242,8 @@ def create_payout_tb():
     create_table(drop, table)
 
 if __name__ == "__main__":
+    create_users_tb()
+    create_code_tb()
     create_payout_tb()
     create_raffle100_tb()
     pass

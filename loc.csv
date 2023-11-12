@@ -41,3 +41,18 @@ you_bought_seat,You bought one seat in raffle,Вы купили одно мес�
 error,Error,Ошибка,Xato
 success,Success,Успех,Muvaffaqiyat
 participate,Participate  ,Участвовать,Ishtirok etish
+notifi_1,"New day New points!
+Browse more and earn them!","Новый день, новые очки!
+Просматривайте больше и зарабатывайте их!","Yangi kun yangi ball!
+Ko'proq ko'rib chiqing va ularni ishlang!"
+notifi_2,"Do not forget to earn points!
+Let's collect them all!","Не забывайте зарабатывать очки!
+Давайте соберем их все!","Ball olishni unutmang!
+Hammasini yig'amiz!"
+tickets_sold,"Your tickets were sold!
+Check out your USDT wallet balance","Ваши билеты были проданы!
+Проверьте баланс вашего USDT кошелька","Sizning chipta sotildi!
+USDT hamyon balansini tekshiring"
+code_denied,Your code was denied,Ваш код был отклонен,Sizning kodingiz rad etildi
+you_got_10t,You got 10 tickets,Вы получили 10 билетов,Sizda 10 ta chipta bor
+you_got_t_from_f,You got 1 ticket from your friend,Вы получили 1 билет от своего друга,Siz do'stingizdan 1 ta chipta oldingiz
