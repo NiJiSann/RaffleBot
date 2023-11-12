@@ -81,15 +81,25 @@ def set_tab(tab):
         tickets_label.configure(text=tickets_count_text)
 
     def set_user_id():
-        loc = DataBase.get_user_loc(int(user_id_entry.get()))
+        try:
+            loc = DataBase.get_user_loc(int(user_id_entry.get()))
+        except:
+            return
         loc_text = f'User Loc: {loc}\n'
         user_loc_label.configure(text=loc_text)
 
     def send_message():
-        bot.send_notification(user_id_entry.get(), message_box.get(0))
+        try:
+            bot.send_notification(user_id_entry.get(), message_box.get("0.0", "end"))
+        except:
+            return
 
     def get_user_info():
-        data = DataBase.get_user(int(user_id_entry1.get()))[0]
+        try:
+            data = DataBase.get_user(int(user_id_entry1.get()))[0]
+        except:
+            return
+
         user_name_text = f'Name: {data[0]} {data[1]}\n'
         username_text = f'Username: {data[2]}\n'
         user_reputation_text = f'Reputation: {data[3]}\n'

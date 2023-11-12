@@ -87,8 +87,8 @@ def set_tab(codes_tab):
             confirm_code_btn = CTkButton(codes_frame, text="confirm", font=("Comic Sans MS", 12), width=40, height=10,
                                          fg_color='green')
             divider = CTkLabel(codes_frame, text='')
-            user_id = CTkLabel(codes_frame, text=f'{item[2]}', font=("Consolas", 13))
-            code = CTkLabel(codes_frame, text=item[3], font=("Consolas", 13))
+            user_id = CTkLabel(codes_frame, text=f'{item[1]}', font=("Consolas", 13))
+            code = CTkLabel(codes_frame, text=item[2], font=("Consolas", 13))
             image = CTkButton(codes_frame, text="image", font=("Comic Sans MS", 12), width=40, height=10)
 
             user_id.grid(row=item_height, column=0, padx=0)
@@ -99,15 +99,15 @@ def set_tab(codes_tab):
             checking_code_btn.grid(row=item_height, column=5, padx=10)
             confirm_code_btn.grid(row=item_height, column=6, padx=10)
 
-            if item[5] == 'denied' or item[5] == 'confirmed':
+            if item[4] == 'denied' or item[4] == 'confirmed':
                 deny_code_btn.configure(state='disabled')
                 confirm_code_btn.configure(state='disabled')
                 checking_code_btn.configure(state='disabled')
 
-            image.configure(command=lambda x=item[4]: show_image(x))
-            deny_code_btn.configure(command=lambda x=item[2], btn=deny_code_btn: deny_code(x, btn))
-            checking_code_btn.configure(command=lambda x=item[2], btn=checking_code_btn: check_code(x, btn))
-            confirm_code_btn.configure(command=lambda x=item[2], btn=confirm_code_btn: confirm_code(x, btn))
+            image.configure(command=lambda x=item[3]: show_image(x))
+            deny_code_btn.configure(command=lambda x=item[1], btn=deny_code_btn: deny_code(x, btn))
+            checking_code_btn.configure(command=lambda x=item[1], btn=checking_code_btn: check_code(x, btn))
+            confirm_code_btn.configure(command=lambda x=item[1], btn=confirm_code_btn: confirm_code(x, btn))
 
             codes_list.append(user_id)
             codes_list.append(code)

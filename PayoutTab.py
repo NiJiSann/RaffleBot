@@ -62,7 +62,7 @@ def set_tab(tab):
             if item[3] == 'paid':
                 pay_btn.configure(state='disabled')
 
-            pay_btn.configure(command=lambda x=item[2], btn=pay_btn: payed(x, btn))
+            pay_btn.configure(command=lambda x=item[0], btn=pay_btn: payed(x, btn))
 
             payout_list.append(user_id)
             payout_list.append(tickets)
