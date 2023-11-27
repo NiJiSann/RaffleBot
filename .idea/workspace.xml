@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="18ea7264-3c8c-4ff6-933a-e5dcc970170f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/GUI/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/Analysis-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/GUI/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/GUI/GUI.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/GUI.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/GUI/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/PKG-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/GUI/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/PYZ-00.pyz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/GUI/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/PYZ-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/GUI/Tree-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/Tree-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/GUI/Tree-01.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/Tree-01.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/GUI/Tree-02.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/Tree-02.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/GUI/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/GUI/warn-GUI.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/warn-GUI.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/GUI/xref-GUI.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/xref-GUI.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/GUI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/GUI.exe" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2Yk1Vt97KWHYHpaPqVEbGNJ2jyY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="GUI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RaffleBot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.GUI" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18ea7264-3c8c-4ff6-933a-e5dcc970170f" name="Changes" comment="" />
+      <created>1701054789532</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701054789532</updated>
+    </task>
+    <servers />
+  </component>
+</project>
