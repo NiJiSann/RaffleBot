@@ -5,6 +5,7 @@ import bot
 
 payout_list = []
 
+
 def set_tab(tab):
     # Stats
     stats_label = CTkLabel(tab, text='Statistics:\n', font=("Comic Sans MS", 20))

@@ -47,6 +47,7 @@ left_padding = 15
 run_switch.place(x=left_padding, y=10)
 tab_view.place(x=0, y=30)
 
+
 def run_bot_event():
     def run_bot():
         if not is_bot_running.get():

@@ -16,7 +16,7 @@ def show_loc():
     return kb, text
 
 
-def addNameToDictionary(d, tup):
+def add_name_to_dictionary(d, tup):
     if tup[0] not in d:
         d[tup[0]] = {}
     d[tup[0]][tup[1]] = [tup[2]]
@@ -25,9 +25,9 @@ def addNameToDictionary(d, tup):
 def parse_loc_keys():
     body = ''
     with open(f'loc.csv', mode='r', encoding='utf-8') as file:
-        csvFile = csv.reader(file)
+        csv_file = csv.reader(file)
 
-        for code in csvFile:
+        for code in csv_file:
             for lang in code:
                 if lang == 'key':
                     continue
@@ -35,7 +35,7 @@ def parse_loc_keys():
                 body += text
             break
 
-        for line in csvFile:
+        for line in csv_file:
             key = line[0]
             text = f'{key} = "{key}"\n'
             body += text
@@ -46,21 +46,21 @@ def parse_loc_keys():
 
 def parse_loc():
     with open(f'loc.csv', mode='r', encoding='utf-8') as file:
-        csvFile = csv.reader(file)
+        csv_file = csv.reader(file)
         codes = []
 
-        for code in csvFile:
+        for code in csv_file:
             for lang in code:
                 if lang == 'key':
                     continue
                 codes.append(lang)
             break
 
-        for line in csvFile:
+        for line in csv_file:
             key = line[0]
             for i in range(len(codes)):
                 tup = (key, codes[i], line[i + 1])
-                addNameToDictionary(loc_data, tup)
+                add_name_to_dictionary(loc_data, tup)
 
 
 def get_loc(key, user_id):
@@ -71,6 +71,3 @@ def get_loc(key, user_id):
         return loc_data[key][lang][0]
     except Exception as e:
         print(e)
-
-if __name__ == '__main__':
-    pass

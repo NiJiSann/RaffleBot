@@ -11,6 +11,7 @@ from Loc import get_loc as loc
 
 codes_list = []
 
+
 def set_tab(codes_tab):
     codes_frame = CTkScrollableFrame(codes_tab, border_color='gray', border_width=1)
     codes_frame.pack(pady=30, fill=BOTH, expand=True)
@@ -58,11 +59,11 @@ def set_tab(codes_tab):
         DataBase.add_reputation(user_id, 1)
         DataBase.add_tickets(user_id, 10)
         DataBase.add_code_quantity(user_id, 1)
-        bot.send_notification(user_id,  loc(Lk.you_got_10t, user_id))
+        bot.send_notification(user_id, loc(Lk.you_got_10t, user_id))
         try:
             DataBase.add_r_tickets(user_id)
             f_id = DataBase.get_user_f_id(user_id)
-            bot.send_notification(f_id,  loc(Lk.you_got_t_from_f, user_id))
+            bot.send_notification(f_id, loc(Lk.you_got_t_from_f, user_id))
             btn.configure(state='disabled')
         except:
             pass

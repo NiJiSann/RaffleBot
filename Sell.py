@@ -2,6 +2,8 @@ from telebot.types import *
 import DataBase
 import LocKeys as Lk
 from Loc import get_loc as loc
+
+
 def sell_tickets(user_id, message: Message):
     sell_amount = int(message.text)
     try:
@@ -15,4 +17,3 @@ def sell_tickets(user_id, message: Message):
     except Exception as e:
         print(e)
         return loc(Lk.error, user_id)
-

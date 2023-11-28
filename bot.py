@@ -32,17 +32,20 @@ raffle_btn = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
 sell_btn = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
 profile_btn = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
 
+
 # region  command section
 @bot.message_handler(commands=['help'])
 def h(message: Message):
     user_id = message.from_user.id
     bot.send_message(user_id, f"{loc(Lk.hlp, user_id)}")
 
+
 @bot.message_handler(commands=['start'])
 def start(message: Message):
     user_id = message.from_user.id
     UserInfo.set_user_info(message)
     show_languages(user_id)
+
 
 # endregion
 
@@ -52,6 +55,8 @@ def show_languages(user_id):
     loc_state = True
     res = Loc.show_loc()
     bot.send_message(user_id, res[1], reply_markup=res[0])
+
+
 # endregion
 
 # region my profile section
@@ -105,6 +110,8 @@ def set_wallet(message: Message):
     user_id = message.from_user.id
     res = UserInfo.set_friend_referral(message, user_id)
     bot.send_message(user_id, res)
+
+
 # endregion
 
 # region code section
@@ -115,10 +122,12 @@ def choose_code(message: Message):
     code_btn = Extentions.add_buttons(code_btn, Layout.get_code_layout(user_id))
     bot.send_message(user_id, loc(Lk.code_type, user_id), reply_markup=code_btn)
 
+
 @bot.message_handler(regexp=r'(Overwatch|Roblox)')
 def send_code_img(message: Message):
     user_id = message.from_user.id
     bot.send_message(user_id, loc(Lk.screenshot, user_id))
+
 
 @bot.message_handler(content_types=['photo'])
 def receive_code(message: Message):
@@ -127,6 +136,7 @@ def receive_code(message: Message):
     user_id = message.from_user.id
     image_byte = GetCode.save_code_screenshot(message, bot)
     bot.send_message(user_id, loc(Lk.send_code_txt, user_id))
+
 
 @bot.message_handler(regexp=code_pattern)
 def receive_code_txt(message: Message):
@@ -137,6 +147,8 @@ def receive_code_txt(message: Message):
     global main_btn
     main_btn = Extentions.add_buttons(main_btn, Layout.get_main_layout(user_id))
     bot.send_message(user_id, loc(Lk.thx_wait, user_id), reply_markup=main_btn)
+
+
 # endregion
 
 # region raffle section
@@ -153,6 +165,8 @@ def raffle100(message: Message):
     user_id = message.from_user.id
     res = Raffle.show_raffle_100(user_id)
     bot.send_message(user_id, res[1], reply_markup=res[0])
+
+
 # endregion
 
 # region sell section
@@ -167,6 +181,7 @@ def sell(message: Message):
     sell_btn = Extentions.add_buttons(sell_btn, Layout.get_sell_layout(user_id))
     bot.send_message(user_id, res, reply_markup=sell_btn)
 
+
 @bot.message_handler(regexp=num_patter)
 def sell(message: Message):
     global sell_state
@@ -179,6 +194,8 @@ def sell(message: Message):
     global main_btn
     main_btn = Extentions.add_buttons(main_btn, Layout.get_main_layout(user_id))
     bot.send_message(user_id, res, reply_markup=main_btn)
+
+
 # endregion
 
 # region common section
@@ -216,7 +233,7 @@ def delete_last_message(message: Message):
 
 
 def send_notification(user_id, text):
-    bot.send_message(user_id, text,)
+    bot.send_message(user_id, text, )
 
 
 # endregion
@@ -239,10 +256,12 @@ def callbacks_handler(callback: CallbackQuery):
         main_btn = Extentions.add_buttons(main_btn, Layout.get_main_layout(user_id))
         bot.send_message(user_id, f"{loc(Lk.thanks, user_id)}", reply_markup=main_btn)
 
+
 # endregion
 
 def start_bot():
     bot.polling()
+
 
 def stop_bot():
     bot.stop_bot()

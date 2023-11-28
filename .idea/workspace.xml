@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="18ea7264-3c8c-4ff6-933a-e5dcc970170f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/Analysis-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/EXE-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/GUI.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/GUI.pkg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/PKG-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/PYZ-00.pyz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/PYZ-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/Tree-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/Tree-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/Tree-01.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/Tree-01.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/Tree-02.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/Tree-02.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/base_library.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/warn-GUI.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/warn-GUI.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/xref-GUI.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/xref-GUI.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/GUI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/GUI.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodesTab.py" beforeDir="false" afterPath="$PROJECT_DIR$/CodesTab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyNotifications.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNotifications.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataBase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExtTab.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExtTab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extentions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extentions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GetCode.py" beforeDir="false" afterPath="$PROJECT_DIR$/GetCode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlerFunc.py" beforeDir="false" afterPath="$PROJECT_DIR$/HandlerFunc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/Layout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Loc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Loc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LocKeys.py" beforeDir="false" afterPath="$PROJECT_DIR$/LocKeys.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sell.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sell.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserInfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loc.csv" beforeDir="false" afterPath="$PROJECT_DIR$/loc.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

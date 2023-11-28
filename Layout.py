@@ -1,6 +1,7 @@
 import LocKeys as Lk
 from Loc import get_loc as loc
 
+
 def get_main_layout(user_id):
     main_layout = [
         loc(Lk.send_code, user_id),
@@ -10,9 +11,10 @@ def get_main_layout(user_id):
     ]
     return main_layout
 
+
 def get_code_layout(user_id):
     code_layout = [
-        "Overwatch 200",  loc(Lk.back, user_id)
+        "Overwatch 200", loc(Lk.back, user_id)
     ]
 
     # "Roblox 400",
@@ -22,6 +24,7 @@ def get_code_layout(user_id):
 
     return code_layout
 
+
 def get_raffle_layout(user_id):
     raffle_layout = [
         f"{loc(Lk.raffle, user_id)} 100$",
@@ -29,11 +32,13 @@ def get_raffle_layout(user_id):
     ]
     return raffle_layout
 
+
 def get_sell_layout(user_id):
     sell_layout = [
         loc(Lk.back, user_id)
     ]
     return sell_layout
+
 
 def get_profile_layout(user_id):
     profile_layout = [
