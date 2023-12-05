@@ -1,4 +1,5 @@
 import sqlite3
+import time
 
 
 def create_table(drop, table):
@@ -19,7 +20,8 @@ def get_query_executor(query):
         connection.commit()
         connection.close()
         return res
-    except:
+    except Exception as e:
+        print(e)
         pass
 
 
@@ -31,7 +33,10 @@ def set_query_executor(query, params):
         cursor.fetchall()
         connection.commit()
         connection.close()
-    except:
+    except Exception as e:
+        time.sleep(1)
+        set_query_executor(query, params)
+        print(e)
         pass
 
 

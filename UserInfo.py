@@ -11,7 +11,6 @@ def set_user_info(message: Message):
     user_last_name = message.from_user.last_name
     username = message.from_user.username
     user_data = DataBase.get_user(user_id)
-
     if not user_data:
         DataBase.set_user(user_first_name, user_id, str(uuid.uuid4()), user_last_name, username)
 
