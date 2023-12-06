@@ -6,19 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="18ea7264-3c8c-4ff6-933a-e5dcc970170f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserInfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserInfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/Analysis-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/EXE-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/GUI.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/GUI.pkg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/PKG-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/PYZ-00.pyz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/base_library.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/warn-GUI.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/warn-GUI.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/GUI/xref-GUI.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/GUI/xref-GUI.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/GUI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/GUI.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/users.db" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.db" beforeDir="false" afterPath="$PROJECT_DIR$/users.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

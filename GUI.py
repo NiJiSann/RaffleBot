@@ -54,12 +54,12 @@ def run_bot_event():
             bot.stop_bot()
         else:
             bot.start_bot()
+            DailyNotifications.subscribe_notifications()
+            DailyNotifications.run_notifications()
 
     threading.Thread(target=run_bot, daemon=True).start()
 
 
 run_switch.configure(command=run_bot_event)
-DailyNotifications.subscribe_notifications()
-DailyNotifications.run_notifications()
 Loc.parse_loc()
 root.mainloop()
