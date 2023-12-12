@@ -12,7 +12,8 @@ import Sell
 import UserInfo
 import LocKeys as Lk
 from Loc import get_loc as loc
-
+# test key: 6913921944:AAGg_Y77clACchEmEiQq0QWeiS2jZDMqDzY
+# original key: 6892712987:AAFoxkiA7cxc9dIJxOE9wyXSVV2jJ1mO8xc
 bot = telebot.TeleBot("6892712987:AAFoxkiA7cxc9dIJxOE9wyXSVV2jJ1mO8xc")
 
 code_pattern = r'^[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{5}-[A-Z0-9]{4}-[A-Z0-9]{4}$'

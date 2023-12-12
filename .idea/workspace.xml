@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="18ea7264-3c8c-4ff6-933a-e5dcc970170f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyNotifications.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNotifications.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.db" beforeDir="false" afterPath="$PROJECT_DIR$/users.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +35,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.DataBase">
+  <component name="RunManager" selected="Python.GUI">
     <configuration name="DataBase" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RaffleBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,8 +80,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.DataBase" />
         <item itemvalue="Python.GUI" />
+        <item itemvalue="Python.DataBase" />
       </list>
     </recent_temporary>
   </component>

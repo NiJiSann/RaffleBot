@@ -50,12 +50,11 @@ tab_view.place(x=0, y=30)
 
 def run_bot_event():
     def run_bot():
+        DailyNotifications.run_notifications()
         if not is_bot_running.get():
             bot.stop_bot()
         else:
             bot.start_bot()
-            DailyNotifications.subscribe_notifications()
-            DailyNotifications.run_notifications()
 
     threading.Thread(target=run_bot, daemon=True).start()
 
